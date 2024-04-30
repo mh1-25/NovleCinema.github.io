@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", function() {
     TheClickButtonM();
     DarKM();
     displayComment(comment) ;
+    show();
+    rate();
 });
 function clearSAVE(){
     var feedback = document.getElementById('fdback').value;
@@ -373,7 +375,7 @@ TheSubmitCommentMH.onclick = function(){
 
                                     // Lara Pages 
 var isShowing= false;
-function show() {
+function show3() {
     if(!isShowing){
         document.getElementById("hidden").style.display = "inline-block";
         document.getElementById("press").innerHTML = "Read less";
@@ -440,29 +442,22 @@ function Theme()
  }
 }
                     //______________ marwan JS__________________
-var rated = 0 ;
-var TheStars = document.getElementsByClassName("fa");
-
-for (var i = 0; i < TheStars.length; i++) {
-    TheStars[i].onclick = function() {
-        rated = Array.from(TheStars).indexOf(this) + 1;
-        rate();
-    };
-}
 
 function rate() {
-    for (var j = 0; j < TheStars.length; j++) {
-        if (j < rated) {
-            TheStars[j].style.color = "#b04a55";
-        } else {
-            TheStars[j].style.color = "#a9aa9f";
-        }
-    }
+    const TheStarsRateMrwan = document.querySelectorAll(".fa")
+    for(let i = 0 ; i < TheStarsRateMrwan.length ; i++){
+        TheStarsRateMrwan[i].onclick = function(){
+            for(let j = 0 ; j < i+1 ; j++){
+                TheStarsRateMrwan[j].style.color = "red";
+            }
+        }    
+    };
 }
+function TheClickButtonForMarwan(){
 const thebutton = document.getElementById ("btn");
 thebutton.onclick = function(){
     alert("the rate has been sent successfully");}
-     
+}
 function feedback (){
     
         alert("your feedback has been sent successfully");}
@@ -573,7 +568,7 @@ function toggleDetails(details1) {
         details.style.display = "none";
     }
 }
-
+function MoreSmoth(){
 document.querySelectorAll('.main-nav a').forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -584,6 +579,7 @@ document.querySelectorAll('.main-nav a').forEach(link => {
         });
     });
 });
+}
 
 document.getElementById('feedbackForm').addEventListener('submit', function(event){
     console.log('Form submission triggered'); // Check if the event is triggered
