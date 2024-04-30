@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     displayComment(comment) ;
     show();
     rate();
+    loadPreferences();
 });
 function clearSAVE(){
     var feedback = document.getElementById('fdback').value;
