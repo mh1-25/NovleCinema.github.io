@@ -463,7 +463,7 @@ function feedback (){
     
         alert("your feedback has been sent successfully");}
 
-        function toggleTheme() {
+        function toggleTheme1() {
             var body = document.body;
             body.classList.toggle("dark");
         }
