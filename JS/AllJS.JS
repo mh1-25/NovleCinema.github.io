@@ -386,11 +386,11 @@ function show3() {
         isShowing=false;
     }
 }
-function COM(){
+function COM10(){
+    alert("Comment Posted");
     var comment= document.getElementById("com").value;
     document.getElementById("displayPart").innerText= comment;
     document.getElementById("com").value='';
-    alert("Comment Posted");
 }
 function RuSure(){
     var confirmed= confirm("Are you sure you want to open a new tab?");
